@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginHorizontal="24dp"
+    android:layout_marginVertical="12dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_title_itinerary"
+            style="@style/TextStyle.HeadingMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="28dp"
+            android:layout_marginTop="20dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Raja Ampat"
+            app:layout_constraintEnd_toStartOf="@id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_notes"
+            style="@style/TextStyle.DescriptionMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="28dp"
+            android:layout_marginTop="12dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintEnd_toStartOf="@id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_itinerary"
+            tools:text="@string/label_notes" />
+
+        <ImageView
+            android:id="@+id/iv_location"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginHorizontal="28dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_location_detail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_notes" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_location"
+            style="@style/TextStyle.DescriptionMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/label_location"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="@id/iv_location"
+            app:layout_constraintEnd_toEndOf="@+id/tv_title_itinerary"
+            app:layout_constraintStart_toEndOf="@id/iv_location"
+            app:layout_constraintTop_toTopOf="@id/iv_location" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_calendar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginHorizontal="28dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_calendar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_location" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_calendar"
+            style="@style/TextStyle.DescriptionMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_calendar"
+            app:layout_constraintEnd_toEndOf="@+id/tv_location"
+            app:layout_constraintStart_toEndOf="@id/iv_calendar"
+            app:layout_constraintTop_toTopOf="@id/iv_calendar"
+            tools:text="27 October 2024 - 30 October 2024" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="3dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="76dp"
+            android:background="@drawable/dashed_vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

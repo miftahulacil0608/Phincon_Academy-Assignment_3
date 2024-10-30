@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipe_refresh"
+    tools:context=".presentation.dashboard.home.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/iv_avatar_user"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_profile"
+                        android:layout_marginStart="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        style="@style/TextStyle.HeadingSmall"
+                        android:textStyle="bold"
+                        android:text="@string/label_say_hello"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_avatar_user"
+                        app:layout_constraintStart_toEndOf="@id/iv_avatar_user"
+                        app:layout_constraintTop_toTopOf="@id/iv_avatar_user" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.appbar.MaterialToolbar>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/question_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="24dp"
+                android:lineSpacingExtra="10dp"
+                android:text="@string/label_question_home_fragment"
+                style="@style/TextStyle.HeadingSuper"
+                android:textSize="36dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_recommendation_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/label_recommended_place"
+                style="@style/TextStyle.HeadingMedium"
+                app:layout_constraintStart_toStartOf="@id/question_title"
+                app:layout_constraintTop_toBottomOf="@id/question_title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_explore_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:textColor="@android:color/darker_gray"
+                style="@style/TextStyle.DescriptionMedium"
+                android:text="@string/label_explore"
+                app:layout_constraintBottom_toBottomOf="@id/tv_recommendation_place"
+                app:layout_constraintEnd_toEndOf="@id/question_title"
+                app:layout_constraintTop_toTopOf="@id/tv_recommendation_place" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_recommended"
+                android:layout_width="0dp"
+                android:paddingHorizontal="24dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_recommendation_place"
+                tools:listitem="@layout/recommended_place_horizontal_layout" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_popular_destination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="24dp"
+                style="@style/TextStyle.HeadingMedium"
+                android:text="@string/label_popular_place"
+                app:layout_constraintStart_toStartOf="@id/rv_recommended"
+                app:layout_constraintTop_toBottomOf="@id/rv_recommended" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_see_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:textColor="@android:color/darker_gray"
+                style="@style/TextStyle.DescriptionMedium"
+                android:text="@string/label_see_all"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_popular_destination"
+                app:layout_constraintEnd_toEndOf="@id/rv_recommended"
+                app:layout_constraintTop_toTopOf="@id/tv_popular_destination" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_popular_destination"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"
+                android:id="@+id/rv_popular_place"
+                tools:listitem="@layout/item_vertical_layout"
+                />
+
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/shimmer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <include layout="@layout/fragment_home_shimmer"/>
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+<!--
+
+<SearchView
+android:id="@+id/btn_search"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_marginTop="32dp"
+android:iconifiedByDefault="false"
+android:queryBackground="@android:color/transparent"
+android:queryHint="Search Destination"
+app:layout_constraintEnd_toEndOf="@id/question_title"
+app:layout_constraintStart_toStartOf="@id/question_title"
+app:layout_constraintTop_toBottomOf="@id/question_title" />-->

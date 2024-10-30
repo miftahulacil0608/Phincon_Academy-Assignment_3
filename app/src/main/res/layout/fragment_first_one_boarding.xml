@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.onboarding.fragment.FirstOneBoardingFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_onboarding_one" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#801D1B1B" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/skip"
+        android:text="@string/label_skip"
+        style="@style/TextStyle.HeadingMedium"
+        android:textColor="@android:color/white"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="24dp"
+        />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:src="@drawable/ic_app_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/heading_onboarding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextStyle.HeadingSuper"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:lineSpacingExtra="4dp"
+        android:text="@string/label_on_boarding_one"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_app" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/subheading_onboarding"
+        android:layout_width="match_parent"
+        style="@style/TextStyle.DescriptionLarge"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="32dp"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="2dp"
+        android:text="@string/label_description_on_boarding_one"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/heading_onboarding" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_next"
+        android:layout_width="0dp"
+        style="@style/TextStyle.HeadingMedium"
+        android:layout_marginTop="18dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:paddingVertical="16dp"
+        android:text="@string/label_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subheading_onboarding"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

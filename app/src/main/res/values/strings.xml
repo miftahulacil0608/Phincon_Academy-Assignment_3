@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">My Traver</string>
+    <string name="label_home">Home</string>
+    <string name="label_itinerary">Itinerary</string>
+    <string name="label_profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_duration">%s Days</string>
+    <string name="label_on_boarding_one">Lets explore the world</string>
+    <string name="label_skip">Skip</string>
+    <string name="label_description_on_boarding_one">let\'s explore the world with us with just a few clicks</string>
+    <string name="label_next">Next</string>
+    <string name="label_heading_on_boarding_two">Visit tourist attractions</string>
+    <string name="label_description_on_boarding_two">Find thousands of tourist destinations ready for you to visit</string>
+    <string name="label_heading_on_boarding_three">Get Ready for next trip</string>
+    <string name="label_description_on_boarding_three">Find thousands of tourist destinations ready for you to visit</string>
+    <string name="label_get_started">Get Started</string>
+    <string name="label_sign_in">Sign In</string>
+    <string name="label_email">Email</string>
+    <string name="label_password">Password</string>
+    <string name="label_heading_choose_reference">Where is your favorite place to explore?</string>
+    <string name="label_submit">Submit</string>
+    <string name="label_say_hello">Hello, %s!</string>
+    <string name="label_question_home_fragment">Where do you want to explore today?</string>
+    <string name="label_recommended_place">Recommended Place</string>
+    <string name="label_explore">Explore</string>
+    <string name="label_popular_place">Popular Place</string>
+    <string name="label_see_all">See All</string>
+    <string name="label_location">Bali, Indonesia</string>
+    <string name="label_notes">Notes: %s</string>
+    <string name="label_email_toolbar">Hindiakan@gmail.com</string>
+    <string name="label_personal_information">Personal Information</string>
+    <string name="label_type_reference">Type Reference</string>
+    <string name="label_logout">Logout</string>
 </resources>

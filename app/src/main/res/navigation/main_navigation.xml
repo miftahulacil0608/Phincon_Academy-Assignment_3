@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/navigation_home">
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.mytraver.presentation.dashboard.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_detailDestinationFragment"
+            app:destination="@id/detailDestinationFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_recommendedListFragment"
+            app:destination="@id/recommendedListFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_popularListFragment"
+            app:destination="@id/popularListFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_itinerary"
+        android:name="com.example.mytraver.presentation.dashboard.itinerary.ItineraryFragment"
+        android:label="fragment_itinerary"
+        tools:layout="@layout/fragment_itinerary" >
+        <action
+            android:id="@+id/action_navigation_itinerary_to_detailRecommendedDestinationFragment"
+            app:destination="@id/detailRecommendedDestinationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.mytraver.presentation.dashboard.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_to_personalInformationFragment"
+            app:destination="@id/personalInformationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailDestinationFragment"
+        android:name="com.example.mytraver.presentation.dashboard.home.DetailDestinationFragment"
+        android:label="fragment_detail_destination"
+        tools:layout="@layout/fragment_detail_destination" >
+        <action
+            android:id="@+id/action_detailDestinationFragment_to_createItineraryFromDetailFragment"
+            app:destination="@id/createItineraryFromDetailFragment"
+             />
+    </fragment>
+    <fragment
+        android:id="@+id/personalInformationFragment"
+        android:name="com.example.mytraver.presentation.dashboard.profile.PersonalInformationFragment"
+        android:label="fragment_personal_information"
+        tools:layout="@layout/fragment_personal_information" />
+    <fragment
+        android:id="@+id/recommendedListFragment"
+        android:name="com.example.mytraver.presentation.dashboard.home.RecommendedListFragment"
+        android:label="fragment_recomended_list"
+        tools:layout="@layout/fragment_recomended_list" >
+        <action
+            android:id="@+id/action_recommendedListFragment_to_detailDestinationFragment"
+            app:destination="@id/detailDestinationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/popularListFragment"
+        android:name="com.example.mytraver.presentation.dashboard.home.PopularListFragment"
+        android:label="fragment_popular_list"
+        tools:layout="@layout/fragment_popular_list" >
+        <action
+            android:id="@+id/action_popularListFragment_to_detailDestinationFragment"
+            app:destination="@id/detailDestinationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createItineraryFromDetailFragment"
+        android:name="com.example.mytraver.presentation.dashboard.home.CreateItineraryFragment"
+        android:label="fragment_create_itinerary_from_detail"
+        tools:layout="@layout/fragment_create_itinerary_from_detail" >
+        <action
+            android:id="@+id/action_createItineraryFromDetailFragment_to_detailDestinationFragment"
+            app:destination="@id/detailDestinationFragment"
+            app:popUpTo="@id/detailDestinationFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_createItineraryFromDetailFragment_to_detailRecommendedDestinationFragment"
+            app:destination="@id/detailRecommendedDestinationFragment"
+            app:popUpTo="@id/detailRecommendedDestinationFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailRecommendedDestinationFragment"
+        android:name="com.example.mytraver.presentation.dashboard.itinerary.DetailItineraryFragment"
+        android:label="fragment_detail_recomended_destination"
+        tools:layout="@layout/fragment_detail_itinerary" >
+        <action
+            android:id="@+id/action_detailRecommendedDestinationFragment_to_createItineraryFromDetailFragment"
+            app:destination="@id/createItineraryFromDetailFragment" />
+    </fragment>
+
+</navigation>

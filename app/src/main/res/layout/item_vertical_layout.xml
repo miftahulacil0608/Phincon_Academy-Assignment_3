@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:layout_marginHorizontal="24dp"
+    android:layout_marginVertical="12dp"
+    app:cardCornerRadius="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:padding="16dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_destination"
+            android:layout_width="86dp"
+            android:layout_height="116dp"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/image_uluwatu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_destination"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="Uluwatu Beach"
+            style="@style/TextStyle.HeadingSmall"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_destination"
+            app:layout_constraintTop_toTopOf="@id/iv_destination" />
+
+        <ImageView
+            android:id="@+id/iv_location"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginVertical="16dp"
+            android:src="@drawable/ic_location_black"
+
+            app:layout_constraintStart_toStartOf="@id/tv_destination"
+            app:layout_constraintTop_toBottomOf="@id/tv_destination" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            tools:text="Bali, Indonesia"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            style="@style/TextStyle.DescriptionSmall"
+            app:layout_constraintBottom_toBottomOf="@id/iv_location"
+            app:layout_constraintStart_toEndOf="@id/iv_location"
+            app:layout_constraintTop_toTopOf="@id/iv_location" />
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            tools:numStars="5"
+            tools:rating="4.5"
+            android:theme="@style/RatingBar"
+            app:layout_constraintBottom_toTopOf="@id/tv_description"
+            app:layout_constraintStart_toStartOf="@id/iv_location"
+            app:layout_constraintTop_toBottomOf="@id/iv_location"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/tv_rating"
+            android:layout_marginStart="4dp"
+            tools:text="4.5"
+            style="@style/TextStyle.DescriptionSmall"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/rating_bar"
+            app:layout_constraintStart_toEndOf="@id/rating_bar"
+            app:layout_constraintTop_toTopOf="@id/rating_bar" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_marginEnd="42dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:textSize="12sp"
+            style="@style/TextStyle.DescriptionSmall"
+            android:textColor="@android:color/darker_gray"
+            tools:text="Bali is an Island in Indonesia know for its verdant volcano"
+            android:maxLines="2"
+            android:id="@+id/tv_description"
+            app:layout_constraintBottom_toBottomOf="@id/iv_destination"
+            app:layout_constraintStart_toStartOf="@id/rating_bar"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

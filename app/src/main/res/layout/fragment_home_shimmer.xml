@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.dashboard.home.HomeFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/iv_avatar_user_shimmer"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_username_shimmer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:background="@android:color/darker_gray"
+                android:ellipsize="end"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="@id/iv_avatar_user_shimmer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_avatar_user_shimmer"
+                app:layout_constraintTop_toTopOf="@id/iv_avatar_user_shimmer" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <View
+        android:id="@+id/question_title_shimmer"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_shimmer" />
+
+
+    <View
+        android:id="@+id/tv_recommendation_place_shimmer"
+        android:layout_width="150dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="@id/question_title_shimmer"
+        app:layout_constraintTop_toBottomOf="@id/question_title_shimmer" />
+
+    <View
+        android:id="@+id/tv_explore_all_shimmer"
+        android:layout_width="50dp"
+        android:layout_height="16dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@id/tv_recommendation_place_shimmer"
+        app:layout_constraintEnd_toEndOf="@id/question_title_shimmer"
+        app:layout_constraintTop_toTopOf="@id/tv_recommendation_place_shimmer" />
+
+    <LinearLayout
+        android:id="@+id/rv_recommended_shimmer"
+        android:layout_width="0dp"
+        android:layout_height="245dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_recommendation_place_shimmer">
+
+        <include layout="@layout/recommended_place_horizontal_layout_shimmer" />
+
+        <include layout="@layout/recommended_place_horizontal_layout_shimmer" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/tv_popular_destination_shimmer"
+        android:layout_width="130dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="@id/rv_recommended_shimmer"
+        app:layout_constraintTop_toBottomOf="@id/rv_recommended_shimmer" />
+
+    <View
+        android:id="@+id/tv_see_all_shimmer"
+        android:layout_width="50dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="@id/tv_popular_destination_shimmer"
+        app:layout_constraintEnd_toEndOf="@id/rv_recommended_shimmer"
+        app:layout_constraintTop_toTopOf="@id/tv_popular_destination_shimmer" />
+
+    <LinearLayout
+        android:id="@+id/rv_popular_place_shimmer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_popular_destination_shimmer">
+
+        <include layout="@layout/item_vertical_layout_shimmer" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
