@@ -18,7 +18,27 @@
             android:scaleType="centerCrop"
             android:src="@drawable/ic_detail_destination"
             app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@id/iv_destination"
+            app:layout_constraintEnd_toEndOf="@id/iv_destination"
+            app:layout_constraintTop_toTopOf="@id/iv_destination"
+            app:layout_constraintBottom_toBottomOf="@id/iv_destination"
+            android:background="#80000000"
+            android:alpha="0.3"
+            />
 
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@id/tv_duration"
+            app:layout_constraintEnd_toEndOf="@id/tv_duration"
+            app:layout_constraintTop_toTopOf="@id/tv_duration"
+            app:layout_constraintBottom_toBottomOf="@id/tv_duration"
+            android:background="#800F0C0C"
+            android:alpha="0.3"
+            />
         <androidx.appcompat.widget.AppCompatImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,10 +54,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tv_duration"
-            android:text="3 Days 2 Night"
-            android:textSize="28sp"
-            android:textStyle="bold"
+            tools:text="3 Days 2 Night"
+            style="@style/TextStyle.HeadingSuper"
+            android:fontFamily="@font/urbanist_bold"
             android:textColor="@android:color/white"
+            android:layout_marginBottom="12dp"
             app:layout_constraintBottom_toTopOf="@id/space"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="24dp" />
@@ -64,6 +85,8 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="1"
+                style="@style/TextStyle.HeadingLarge"
+                android:textStyle="bold"
                 android:text="Raja Ampat"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -82,9 +105,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:text="Raja Ampat, Papua Barat"
+                tools:text="Raja Ampat, Papua Barat"
                 android:textColor="@android:color/black"
-                android:textSize="12sp"
+                style="@style/TextStyle.DescriptionMedium"
                 app:layout_constraintBottom_toBottomOf="@id/iv_location"
                 app:layout_constraintStart_toEndOf="@id/iv_location"
                 app:layout_constraintTop_toTopOf="@id/iv_location" />
@@ -107,9 +130,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_marginStart="4dp"
-                android:text="4.5"
+                tools:text="4.5"
                 android:textColor="@android:color/black"
-                android:textSize="10sp"
+                style="@style/TextStyle.DescriptionMedium"
                 app:layout_constraintBottom_toBottomOf="@id/rating_bar"
                 app:layout_constraintStart_toEndOf="@id/rating_bar"
                 app:layout_constraintTop_toTopOf="@id/rating_bar" />
@@ -128,6 +151,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:text="Description"
+                style="@style/TextStyle.HeadingMedium"
                 app:layout_constraintTop_toBottomOf="@id/divider" />
 
             <com.google.android.material.textview.MaterialTextView
@@ -136,6 +160,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:lineSpacingExtra="3dp"
+                style="@style/TextStyle.DescriptionMedium"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu amet tempor, in massa, habitasse habitasse fermentum, sed faucibus. Augue arcu, ac proin accumsan urna morbi diam nunc, tincidunt. Ac turpis amet vitae dui aliquam vitae nunc. Non enim, lorem duis maecenas odio Read More"
                 app:layout_constraintTop_toBottomOf="@id/tv_description" />
 
@@ -144,7 +169,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:text="Activity"
+                android:text="@string/label_activity"
+                style="@style/TextStyle.HeadingMedium"
                 app:layout_constraintTop_toBottomOf="@id/tv_detail_description" />
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_type_of_activity"
@@ -152,12 +178,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="Mancing"
+                style="@style/TextStyle.DescriptionMedium"
                 app:layout_constraintTop_toBottomOf="@id/tv_activity" />
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_type"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
+                style="@style/TextStyle.HeadingMedium"
                 android:text="Type Of Reference"
                 app:layout_constraintTop_toBottomOf="@id/tv_type_of_activity" />
             <com.google.android.material.textview.MaterialTextView
@@ -165,11 +193,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Alam"
+                tools:text="Alam"
+                style="@style/TextStyle.DescriptionMedium"
                 app:layout_constraintTop_toBottomOf="@id/tv_type" />
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_notes"
                 android:layout_width="match_parent"
+                style="@style/TextStyle.HeadingMedium"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:text="Notes"
@@ -179,6 +209,7 @@
                 android:id="@+id/tv_detail_notes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                style="@style/TextStyle.DescriptionMedium"
                 android:layout_marginTop="10dp"
                 android:lineSpacingExtra="3dp"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu amet tempor, in massa, habitasse habitasse fermentum, sed faucibus. Augue arcu, ac proin accumsan urna morbi diam nunc, tincidunt. Ac turpis amet vitae dui aliquam vitae nunc. Non enim, lorem duis maecenas odio Read More"
@@ -188,8 +219,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Edit"
-                android:textSize="18sp"
-                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                style="@style/TextStyle.HeadingSmall"
                 android:id="@+id/btn_edit"
                 android:paddingVertical="16dp"
                 app:layout_constraintTop_toBottomOf="@id/tv_detail_notes"
@@ -203,8 +234,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Delete"
-                android:textSize="18sp"
-                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                style="@style/TextStyle.HeadingSmall"
                 android:id="@+id/btn_delete"
                 android:paddingVertical="16dp"
                 app:layout_constraintTop_toBottomOf="@id/btn_edit"

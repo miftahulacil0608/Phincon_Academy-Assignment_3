@@ -39,7 +39,7 @@
             android:id="@+id/space"
             android:layout_width="5dp"
             android:layout_height="5dp"
-            android:layout_marginBottom="70dp"
+            android:layout_marginBottom="80dp"
             app:layout_constraintBottom_toBottomOf="@id/iv_destination"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -65,7 +65,8 @@
                     android:id="@+id/tie_destination"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Raja Ampat"
+                    tools:text="Raja Ampat"
+                    style="@style/TextStyle.HeadingMedium"
                     android:textColor="@android:color/black"
                     android:textAlignment="center" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -86,18 +87,19 @@
                     android:id="@+id/tie_duration"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/label_duration"
-                    android:paddingStart="36dp"
-                    android:textSize="14sp"
+                    android:text="@string/label_duration"
+                    android:textColor="@android:color/black"
+                    style="@style/TextStyle.HeadingMedium"
                     android:textAlignment="center" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_notes"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="150dp"
                 android:layout_marginTop="12dp"
                 app:hintEnabled="true"
+                style="@style/TextStyle.DescriptionSmall"
                 android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toTopOf="@id/btn_submit_itinerary"
                 app:layout_constraintTop_toBottomOf="@id/til_date"
@@ -119,10 +121,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:paddingVertical="16dp"
-                android:text="Submit Itinerary"
-                android:textSize="18sp"
+                android:text="@string/label_submit_itinerary"
                 android:id="@+id/btn_submit_itinerary"
-                android:textStyle="bold"
+                style="@style/TextStyle.HeadingSmall"
                 app:layout_constraintTop_toBottomOf="@id/til_notes"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginVertical="20dp"

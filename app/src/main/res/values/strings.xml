@@ -32,4 +32,7 @@
     <string name="label_personal_information">Personal Information</string>
     <string name="label_type_reference">Type Reference</string>
     <string name="label_logout">Logout</string>
+    <string name="label_activity">Activity</string>
+    <string name="label_submit_itinerary">Submit Itinerary</string>
+    <string name="label_question_logout">Are you sure want to log out your account?</string>
 </resources>
