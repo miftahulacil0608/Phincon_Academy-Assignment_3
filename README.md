@@ -29,18 +29,6 @@ Traver App dibangun dengan **Clean Architecture** menggunakan beberapa komponen 
 - **LiveData & Flow**: Mengelola data secara asinkron dan reaktif.
 - **RecyclerView**: Menampilkan daftar destinasi dengan dukungan infinite scroll.
 
-  app
-├── data
-│   ├── api                 # Service untuk panggilan API
-│   ├── db                  # Penyimpanan lokal menggunakan Room Database
-│   ├── repository          # Repository untuk API dan data lokal
-├── domain
-│   ├── model               # Model domain yang digunakan di aplikasi
-│   ├── usecase             # Logika bisnis utama (UseCase)
-├── ui                      # Fragment dan Adapter untuk UI
-├── di                      # Pengaturan Dependency Injection menggunakan Hilt
-
-
 ## Penggunaan Aplikasi
 
 ### 1. Lihat Daftar Destinasi
