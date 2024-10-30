@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.dashboard.home.DetailDestinationFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_destination"
+            android:layout_width="match_parent"
+            android:layout_height="403dp"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/ic_detail_destination"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@id/iv_destination"
+            app:layout_constraintEnd_toEndOf="@id/iv_destination"
+            app:layout_constraintTop_toTopOf="@id/iv_destination"
+            app:layout_constraintBottom_toBottomOf="@id/iv_destination"
+            android:background="#80000000"
+            android:alpha="0.3"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@id/tv_duration"
+            app:layout_constraintEnd_toEndOf="@id/tv_duration"
+            app:layout_constraintTop_toTopOf="@id/tv_duration"
+            app:layout_constraintBottom_toBottomOf="@id/tv_duration"
+            android:background="#800F0C0C"
+            android:alpha="0.3"
+            />
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_back"
+            android:src="@drawable/ic_back_button"
+            android:background="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextStyle.HeadingSuper"
+            android:id="@+id/tv_duration"
+            tools:text="3 Days 2 Night"
+            android:fontFamily="@font/urbanist_bold"
+            android:layout_marginBottom="12dp"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@id/space"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp"
+            />
+        <Space
+            android:id="@+id/space"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginBottom="70dp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_destination"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_bg_detail_layout"
+            android:padding="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/space">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_title_destination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                style="@style/TextStyle.HeadingLarge"
+                android:textStyle="bold"
+                android:maxLines="1"
+                tools:text="Raja Ampat"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_location"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/ic_location_detail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_destination" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                tools:text="Raja Ampat, Papua Barat"
+                android:textColor="@android:color/black"
+                style="@style/TextStyle.DescriptionMedium"
+                app:layout_constraintBottom_toBottomOf="@id/iv_location"
+                app:layout_constraintStart_toEndOf="@id/iv_location"
+                app:layout_constraintTop_toTopOf="@id/iv_location" />
+
+            <RatingBar
+                android:id="@+id/rating_bar"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:isIndicator="true"
+                tools:numStars="5"
+                tools:rating="4.5"
+                android:theme="@style/RatingBar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_location" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="4dp"
+                tools:text="4.5"
+                android:textColor="@android:color/black"
+                style="@style/TextStyle.DescriptionMedium"
+                app:layout_constraintBottom_toBottomOf="@id/rating_bar"
+                app:layout_constraintStart_toEndOf="@id/rating_bar"
+                app:layout_constraintTop_toTopOf="@id/rating_bar" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintTop_toBottomOf="@id/rating_bar" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Description"
+                style="@style/TextStyle.HeadingMedium"
+                app:layout_constraintTop_toBottomOf="@id/divider" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_detail_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:lineSpacingExtra="3dp"
+                style="@style/TextStyle.DescriptionMedium"
+                android:maxLines="5"
+                android:ellipsize="end"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu amet tempor, in massa, habitasse habitasse fermentum, sed faucibus. Augue arcu, ac proin accumsan urna morbi diam nunc, tincidunt. Ac turpis amet vitae dui aliquam vitae nunc. Non enim, lorem duis maecenas odio Read More"
+                app:layout_constraintTop_toBottomOf="@id/tv_description" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/label_activity"
+                style="@style/TextStyle.HeadingMedium"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_description" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_type_of_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:text="Mancing"
+                style="@style/TextStyle.DescriptionMedium"
+                app:layout_constraintTop_toBottomOf="@id/tv_activity" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                style="@style/TextStyle.HeadingMedium"
+                android:text="Type Of Reference"
+                app:layout_constraintTop_toBottomOf="@id/tv_type_of_activity" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_type_of_reference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:text="Alam"
+                style="@style/TextStyle.DescriptionMedium"
+                app:layout_constraintTop_toBottomOf="@id/tv_type" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:id="@+id/btn_create_itinerary"
+                android:paddingVertical="16dp"
+                android:text="Create Itinerary"
+                style="@style/TextStyle.HeadingSmall"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tv_type_of_reference"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Large" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

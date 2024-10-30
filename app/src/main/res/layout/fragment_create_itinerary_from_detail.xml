@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.dashboard.home.CreateItineraryFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_destination"
+            android:layout_width="match_parent"
+            android:layout_height="403dp"
+            android:backgroundTint="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_detail_destination"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/BottomRounded" />
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_cancel"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/ic_cancel"
+            />
+
+        <androidx.legacy.widget.Space
+            android:id="@+id/space"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginBottom="80dp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_destination"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_bg_detail_layout"
+            android:padding="28dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/space">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_destination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:enabled="false"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_destination"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Raja Ampat"
+                    style="@style/TextStyle.HeadingMedium"
+                    android:textColor="@android:color/black"
+                    android:textAlignment="center" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:clickable="false"
+                android:enabled="false"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@id/til_destination"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium"
+                app:startIconDrawable="@drawable/ic_calendar">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_duration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_duration"
+                    android:textColor="@android:color/black"
+                    style="@style/TextStyle.HeadingMedium"
+                    android:textAlignment="center" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_notes"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="12dp"
+                app:hintEnabled="true"
+                style="@style/TextStyle.DescriptionSmall"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@id/btn_submit_itinerary"
+                app:layout_constraintTop_toBottomOf="@id/til_date"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_notes"
+                    android:gravity="top"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Write Notes"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:paddingVertical="16dp"
+                android:text="@string/label_submit_itinerary"
+                android:id="@+id/btn_submit_itinerary"
+                style="@style/TextStyle.HeadingSmall"
+                app:layout_constraintTop_toBottomOf="@id/til_notes"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginVertical="20dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Large" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
