@@ -52,6 +52,7 @@ class PopularListFragmentViewModel @Inject constructor(private val useCaseDestin
     fun searchListRecommendedByType(query: String?) {
         currentPage = 1
         searchQuery = query
+        totalPage = 0
         dataItems.clear()
         loadDataMore()
     }
@@ -59,6 +60,7 @@ class PopularListFragmentViewModel @Inject constructor(private val useCaseDestin
     fun reset() {
         currentPage = 1
         searchQuery = null
+        totalPage=0
         dataItems.clear()
     }
 }

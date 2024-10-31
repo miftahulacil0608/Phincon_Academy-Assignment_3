@@ -71,7 +71,6 @@ class CreateItineraryFragment : Fragment() {
             }
         }else if (dataItinerary!=null){
             dataItinerary?.let {
-                binding.tieNotes.setText(it.notes)
                 setupViewUpdateItinerary(it)
                 updateItinerary(it)
             }
@@ -125,6 +124,8 @@ class CreateItineraryFragment : Fragment() {
 
 
     private fun updateItinerary(data: ItineraryData) {
+        binding.tieNotes.setText(data.notes)
+        binding.btnSubmitItinerary.text = "Edit Itinerary"
         binding.btnSubmitItinerary.setOnClickListener {
             val inputData = ItineraryData(
                 id = data.id,

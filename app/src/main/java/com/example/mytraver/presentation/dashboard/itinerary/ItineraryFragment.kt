@@ -73,7 +73,7 @@ class ItineraryFragment : Fragment(), OnItemVerticalAdapterItinerary {
                     }
 
                     is StateUser.Error -> {
-                        Toast.makeText(requireContext(), it.error, Toast.LENGTH_SHORT).show()
+
                     }
                 }
             }

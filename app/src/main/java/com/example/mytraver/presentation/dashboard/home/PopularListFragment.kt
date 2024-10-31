@@ -102,14 +102,11 @@ class PopularListFragment : Fragment(), OnItemVerticalAdapter, OnQueryTextListen
     override fun onResume() {
         super.onResume()
         popularListFragmentViewModel.reset()
-
     }
 
     override fun onClickVerticalItem(item: DataItem) {
         val bundle = bundleOf(DetailDestinationFragment.KEY_ID to item.id)
         binding.btnSearch.clearFocus()
-        popularListFragmentViewModel.reset()
-
         findNavController().navigate(
             R.id.action_popularListFragment_to_detailDestinationFragment,
             bundle

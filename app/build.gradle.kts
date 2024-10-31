@@ -91,6 +91,10 @@ dependencies {
     //shimmer
     implementation(libs.shimmer)
 
+    //mock and coroutine test
+
+    implementation(libs.mocK)
+    implementation(libs.coroutines.test)
 
 
 
