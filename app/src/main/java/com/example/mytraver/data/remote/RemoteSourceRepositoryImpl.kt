@@ -11,7 +11,7 @@ class RemoteSourceRepositoryImpl(private val apiService: ApiService):RemoteSourc
         return apiService.login(LoginInput(email,password))
     }
 
-    //nanti dirubah menjadi full list oke
+    //TODO DELETE
     override suspend fun getListRecommended(page: Int): ListRecommendedDto {
         return apiService.getListDataRecommended(page)
     }

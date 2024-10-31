@@ -16,6 +16,7 @@ interface ApiService {
         @Body data: LoginInput
     ): LoginResponseDto
 
+    //TODO DELETE
     @GET("travel")
     suspend fun getListDataRecommended(@Query("page") page: Int): ListRecommendedDto
 
@@ -29,8 +30,5 @@ interface ApiService {
 
     @GET("travel/{id}")
     suspend fun getDetailTravel(@Path("id") id: Int):DetailDestinationDto
-
-    @GET("travel")
-    suspend fun getListPopular(@Query("page") page: Int): ListRecommendedDto
 
 }

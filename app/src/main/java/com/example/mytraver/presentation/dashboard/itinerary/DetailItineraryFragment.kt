@@ -56,7 +56,7 @@ class DetailItineraryFragment() : Fragment() {
             detailItineraryFragmentViewModel.listItinerary.collect {
                 when (it) {
                     StateUser.Loading -> {
-                        //TODO shimmer
+
                     }
 
                     is StateUser.Success -> {

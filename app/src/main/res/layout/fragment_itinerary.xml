@@ -36,7 +36,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:id="@+id/iv_empty_data"
-        android:visibility="gone"
         android:src="@drawable/iv_empty_data"
         />
 

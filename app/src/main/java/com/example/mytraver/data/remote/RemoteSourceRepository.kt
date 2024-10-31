@@ -6,7 +6,8 @@ import com.example.mytraver.data.model.LoginResponseDto
 
 interface RemoteSourceRepository {
     suspend fun login(email:String, password:String):LoginResponseDto
-    //ini isinya masih full
+
+    //TODO DELETE
     suspend fun getListRecommended(page:Int):ListRecommendedDto
 
     suspend fun getLisRecommendedByType(page:Int?,type:String,query:String?):ListRecommendedDto
